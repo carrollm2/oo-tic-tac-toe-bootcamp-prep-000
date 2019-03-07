@@ -6,13 +6,13 @@ class TicTacToe
     @board = board || Array.new(9, " ")
   end
 
-  def current_player(board)
-    turn_number = turn_count(board) + 1
+  def current_player
+    turn_number = turn_count(@board) + 1
     turn_number.odd? ? current_player = "X" : current_player =  "O"
     return current_player
   end
 
-  def display_board(board)
+  def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
     puts " #{@board[3]} | #{@board[4]} | #{@board[5]} "
