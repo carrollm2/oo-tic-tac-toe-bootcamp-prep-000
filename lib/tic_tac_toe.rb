@@ -88,15 +88,18 @@ class TicTacToe
   end
 
 
+  #def turn_count
+    #turn_count = 0
+    #@board.each do |turn|
+      #if turn == "X" || turn == "O"
+        #turn_count += 1
+      #end
+    #end
+    #return turn_count
+  #end
+
   def turn_count
-    turn_count = 0
-    @board.each do |turn|
-      if turn == "X" || turn == "O"
-        turn_count += 1
-      end
-    end
-    return turn_count
-  end
+    @board.count{|token| token == "X" || token == "O"}
 
   def winner
     winning_combination = won?(@board)
