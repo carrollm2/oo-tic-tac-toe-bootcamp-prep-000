@@ -103,7 +103,7 @@ class TicTacToe
   end
 
   def winner
-    winning_combination = won?(@board)
+    winning_combination = won?
     if winning_combination
       return @board[winning_combination[0]]
     else
@@ -114,7 +114,7 @@ class TicTacToe
   def won?
     WIN_COMBINATIONS.each do |combination|
 
-      if position_taken?(@board, combination[0]) && position_taken?(@board, combination[1]) && position_taken?(@board, combination[2])
+      if position_taken?(combination[0]) && position_taken?(combination[1]) && position_taken?(combination[2])
         position_1 = board[combination[0]]
         position_2 = board[combination[1]]
         position_3 = board[combination[2]]
