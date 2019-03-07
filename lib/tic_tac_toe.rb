@@ -7,7 +7,7 @@ class TicTacToe
   end
 
   def current_player
-    turn_number = turn_count(@board) + 1
+    turn_number = turn_count + 1
     turn_number.odd? ? current_player = "X" : current_player =  "O"
     return current_player
   end
