@@ -115,9 +115,9 @@ class TicTacToe
     WIN_COMBINATIONS.each do |combination|
 
       if position_taken?(combination[0]) && position_taken?(combination[1]) && position_taken?(combination[2])
-        position_1 = board[combination[0]]
-        position_2 = board[combination[1]]
-        position_3 = board[combination[2]]
+        position_1 = @board[combination[0]]
+        position_2 = @board[combination[1]]
+        position_3 = @board[combination[2]]
 
         if position_1 == position_2 && position_2 == position_3
           return combination
