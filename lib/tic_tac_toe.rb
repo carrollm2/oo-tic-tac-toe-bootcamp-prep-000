@@ -21,7 +21,7 @@ class TicTacToe
   end
 
   def draw?
-    if full?(@board) && !won?(@board)
+    if full? && !won?
       return true
     else
       return false
@@ -46,7 +46,7 @@ class TicTacToe
   end
 
   def over?
-    if won?(@board) || draw?(@board) || full?(@board)
+    if won? || draw? || full?
       return true
     else
       return false
@@ -54,8 +54,8 @@ class TicTacToe
   end
 
   def play
-    while !over?(@board)
-      turn(@board)
+    while !over?
+      turn
     end
 
     if draw?
