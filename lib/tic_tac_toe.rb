@@ -100,6 +100,7 @@ class TicTacToe
 
   def turn_count
     @board.count{|token| token == "X" || token == "O"}
+  end
 
   def winner
     winning_combination = won?(@board)
